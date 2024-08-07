@@ -45,6 +45,14 @@
         "stdexcept": "cpp",
         "streambuf": "cpp",
         "typeinfo": "cpp",
-        "ctime": "cpp"
+        "ctime": "cpp",
+        "format": "cpp",
+        "span": "cpp",
+        "chrono": "cpp",
+        "charconv": "cpp",
+        "ratio": "cpp",
+        "iomanip": "cpp",
+        "sstream": "cpp",
+        "variant": "cpp"
     }
 }

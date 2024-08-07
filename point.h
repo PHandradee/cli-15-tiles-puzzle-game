@@ -12,6 +12,8 @@ struct Point
 
     friend bool operator== (const Point& c1, const Point& c2);
     friend bool operator!= (const Point& c1, const Point& c2);
+    friend std::ostream& operator<<(std::ostream& out, const Point& point);
+
 
 };
 

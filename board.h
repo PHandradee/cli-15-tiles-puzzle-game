@@ -5,6 +5,7 @@
 #include <array>
 #include <ostream>
 #include "tile.h"
+#include "direction.h"
 
 
 using Matrix = std::array<std::array<Tile,4>,4>;
@@ -16,6 +17,8 @@ private:
 
     Matrix create_default_board();
 
+    void swap_tiles(const Tile& tile1, const Tile& tile2);
+
 public:
     Board(): m_board { create_default_board() } {};
 
@@ -26,6 +29,8 @@ public:
         for (int i = 0; i < count; ++i)
             std::cout << '\n';
     }
+
+    void move_tile(Direction dir);
 
 };
 
