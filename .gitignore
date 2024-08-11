@@ -1,0 +1,43 @@
+# Arquivos de compilação e saída
+*.o
+*.out
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Arquivos gerados pelo CMake
+CMakeFiles/
+CMakeCache.txt
+CMakeScripts/
+CMakeTmp/
+Makefile
+cmake_install.cmake
+
+# Diretório de compilação (geralmente chamado "build" ou "bin")
+/build/
+/bin/
+
+# Arquivos de configuração do IDE (opcional, se você usa algum IDE específico)
+.vscode/
+.idea/
+*.suo
+*.user
+*.sln
+*.suo
+*.ncb
+*.aps
+*.opendb
+*.VC.db
+*.VC.VC.opendb
+
+# Dependências (se você gerencia as dependências de outra forma, ajuste esta seção)
+/vendor/
+/libs/
+
+# Arquivos temporários e lixo
+*.log
+*.tmp
+*.swp
+*.DS_Store
+Thumbs.db
