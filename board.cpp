@@ -69,6 +69,15 @@ void Board::move_tile(Direction dir)
 
 }
 
+void Board::shuffle_board(int move_count)
+{
+    for (size_t i = 0; i <= move_count; ++i)
+    {
+        move_tile( Direction::generate_random_direction() );
+    }
+    
+}
+
 std::ostream& operator<<(std::ostream& out, const Board& board)
 {
     

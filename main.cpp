@@ -9,12 +9,14 @@ int main()
 {
     
     Board board{};
-    std::cout << board;
 
-    std::cout << "Enter a command: ";
+    board.shuffle_board(1000);
+
+    std::cout << board;
 
     while (true)
     {
+        std::cout << "Enter a command: ";
         char input { InputHandler::handle_user_input() };
 
 

@@ -30,6 +30,8 @@ public:
 
     void move_tile(Direction dir);
 
+    void shuffle_board(int move_count = 25);
+
 };
 
 
