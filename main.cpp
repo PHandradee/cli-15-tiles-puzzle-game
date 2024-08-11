@@ -8,9 +8,11 @@
 int main() 
 {
     
+    const Board correct_board {};
+    
     Board board{};
 
-    board.shuffle_board(1000);
+    board.shuffle_board(1);
 
     std::cout << board;
 
@@ -38,6 +40,15 @@ int main()
 
         }
 
+        if (board.check_win_condition(correct_board)) 
+        {
+            std::cout << board << '\n';
+
+            std::cout << "Congratulations! You win!" << '\n';
+
+            break;
+        };
+        
 
     }
     

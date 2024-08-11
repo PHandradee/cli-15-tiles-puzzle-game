@@ -5,6 +5,12 @@
 #include "point.h"
 
 
+Matrix Board::get_board() const
+{
+    return m_board;
+}
+
+
 Matrix Board::create_default_board()
 {
     
@@ -33,6 +39,27 @@ Matrix Board::create_default_board()
 bool is_zero_tile(const Tile& tile) 
 {
     return tile.get_value() == 0;
+}
+
+bool Board::check_win_condition(const Board& correct_board) const
+{
+    
+    for (size_t i = 0; i < m_board.size(); ++i)
+    {
+        for (size_t j = 0; j < m_board[i].size(); ++j)
+        {
+            if (m_board[i][j].get_value() == correct_board.get_board()[i][j].get_value()) 
+            {
+                continue;
+            } else {
+                return false;
+            };
+        }
+        
+    }
+
+    
+    return true;
 }
 
 void Board::move_tile(Direction dir)
@@ -77,6 +104,8 @@ void Board::shuffle_board(int move_count)
     }
     
 }
+
+
 
 std::ostream& operator<<(std::ostream& out, const Board& board)
 {

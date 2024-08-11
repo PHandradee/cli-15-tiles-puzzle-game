@@ -28,9 +28,13 @@ public:
             std::cout << '\n';
     }
 
+    bool check_win_condition(const Board& correct_board) const;
+
     void move_tile(Direction dir);
 
     void shuffle_board(int move_count = 25);
+
+    Matrix get_board() const;
 
 };
 
