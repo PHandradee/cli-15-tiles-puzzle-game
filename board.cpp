@@ -35,11 +35,6 @@ bool is_zero_tile(const Tile& tile)
     return tile.get_value() == 0;
 }
 
-void Board::swap_tiles(const Tile& tile1, const Tile& tile2)
-{
-    
-}
-
 void Board::move_tile(Direction dir)
 {
 
@@ -59,20 +54,12 @@ void Board::move_tile(Direction dir)
         zero_tile_position = Point { zero_row, zero_col };
         
     }
-    else
-    {
-        std::cout << "Nenhum elemento com valor zero encontrado na matriz.\n";
-    }
 
     Point adjacent_point { zero_tile_position.get_adjacent_point((-dir).get_type())};
 
     if ((adjacent_point.x >= 0 && adjacent_point.x < 4  ) && (adjacent_point.y >= 0 && adjacent_point.y < 4  ))
     {
-        std::cout << "Zero Tile Point " << zero_tile_position <<  "\n";
-        std::cout << "Adjacent Point com valor válido " << adjacent_point <<  "\n";
         Tile& tile_to_move = m_board[adjacent_point.x][adjacent_point.y] ;
-
-        std::cout << "Tile to Move" << tile_to_move <<  "\n";
 
         zero_tile->set_value(tile_to_move.get_value());
         tile_to_move.set_value(0);
@@ -86,7 +73,7 @@ std::ostream& operator<<(std::ostream& out, const Board& board)
 {
     
     
-    board.printEmptyLines(2);
+    board.printEmptyLines(25);
     
     for (const auto& i : board.m_board)
     {
