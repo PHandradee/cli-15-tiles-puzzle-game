@@ -73,7 +73,7 @@ std::ostream& operator<<(std::ostream& out, const Board& board)
 {
     
     
-    board.printEmptyLines(25);
+    board.print_empty_lines(25);
     
     for (const auto& i : board.m_board)
     {

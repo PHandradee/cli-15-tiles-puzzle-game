@@ -17,14 +17,12 @@ private:
 
     Matrix create_default_board();
 
-    void swap_tiles(const Tile& tile1, const Tile& tile2);
-
 public:
     Board(): m_board { create_default_board() } {};
 
     friend std::ostream& operator<<(std::ostream& out, const Board& board);
 
-    static void printEmptyLines(int count)
+    static void print_empty_lines(int count)
     {
         for (int i = 0; i < count; ++i)
             std::cout << '\n';
