@@ -8,17 +8,6 @@
 int main() 
 {
     
-    //Tile tile1{ 10 };
-    //Tile tile2{ 8 };
-    //Tile tile3{ 0 }; // the missing tile
-    //Tile tile4{ 1 };
-//
-    //std::cout << "0123456789ABCDEF\n"; // to make it easy to see how many spaces are in the next line
-    //std::cout << tile1 << tile2 << tile3 << tile4 << '\n';
-//
-    //std::cout << std::boolalpha << tile1.is_empty() << ' ' << tile3.is_empty() << '\n';
-    //std::cout << "Tile 2 has number: " << tile2.get_value() << "\nTile 4 has number: " << tile4.get_value() << '\n';
-
     Board board{};
     std::cout << board;
 
@@ -40,9 +29,6 @@ int main()
         {
             // Handle direction commands
             Direction dir{ input };
-
-            std::cout << "You entered direction: " << dir << '\n';
-            std::cout << "The oppossite direction is: " << -dir << '\n';
 
             board.move_tile(dir);
 
